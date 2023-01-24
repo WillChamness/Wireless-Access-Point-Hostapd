@@ -1,0 +1,33 @@
+# /etc/network/interfaces
+# interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+# source /etc/network/interfaces.d/*
+
+auto lo
+iface lo inet loopback
+
+allow-hotplug eth0
+iface eth0 inet manual
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+
+# Wireless bridge interface
+auto lo br0
+iface br0 inet static
+	bridge_ports wlan0 eth0
+	address 192.168.254.9
+	network 192.168.254.0
+	netmask 255.255.255.0
+	gateway 192.168.254.254
+	dns-nameservers 192.168.254.11,1.1.1.1
+iface br0 inet6 static
+	# Static Config
+	bridge_ports wlan0 eth0
+	address fd00::9
+	netmask 64
+	dns-nameservers fd00::11 2606:4700:4700::1111
+	up ip addr add fe80::9/64 dev br0 && ip addr add 2604:cb00:720:ff00::9/64 dev br0
+	down ip addr del fe80::9/64 dev br0 && ip addr del 2604:cb00:720:ff00::9/64 dev br0
+	# SLAAC Autoconfig
+	autoconf 1
