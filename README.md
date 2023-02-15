@@ -29,7 +29,7 @@ Although the definition of wireless APs may seem straight-forward, there is ambi
 
 In the context of the OSI model, wireless APs are by definition on layer 2. However, routers are layer 3 devices. Are wireless routers really APs? 
 <br></br>
-Although a wireless router is unmistakably a layer 3 device, it is very similar <i>in concept</i> to an Ethernet router and switch connected together; namely, there is a layer 2 connection in between. In the Ethernet network, the devices connect to the subnet via the switch, and any resources outside the subnet are reached via the router where its two interfaces are on different subnets. Similarly in a WiFi network, the devices connect to the subnet via the AP, and the AP allows access to outside resources with its two interfaces on different subnets. 
+Although a wireless router is unmistakably a layer 3 device, it is very similar <i>in concept</i> to an Ethernet router and switch connected together; namely, there is a layer 2 connection in between. In an Ethernet network, the devices connect to the subnet via the switch, and any resources outside the subnet are reached via the router where its two interfaces are on different subnets. Similarly in a WiFi network, the devices connect to the subnet via the AP, and the AP allows access to outside resources with its two interfaces on different subnets. However, another subnet is not a requirement in this scenario.
 <br></br>
 
 # WIRELESS BRIDGES
