@@ -74,8 +74,8 @@ The first step is to configure the Ethernet and WiFi interfaces. Edit the file `
 <br></br>
 Next, edit the files ```/etc/default/hostapd``` and ```/etc/hostapd/hostapd.conf```. Enable hostapd with the following commands:
 ```
-sudo systemctl enable hostapd
 sudo systemctl unmask hostapd
+sudo systemctl enable hostapd
 ```
 Hostapd is a daemon that provides wireless routing/bridging utilities. 
 <br></br>
