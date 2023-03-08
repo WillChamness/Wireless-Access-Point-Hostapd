@@ -65,6 +65,7 @@ Please see the ```wireless_bridge``` and ```wireless_router``` directories for t
 The following apt packages must be installed:
 - hostapd
 - bridge-utils
+- wireless-tools
 - dnsmasq (or other DNS & DHCP daemon)
 
 This guide assumes that there is neither a DNS nor a DHCP server on the wireless network. Hence, Dnsmasq will be used for both. If you prefer another daemon for each, you can use those instead. Furthermore, this guide will use ```ufw``` to set up NAT to avoid changing your SOHO router's routing table since routing is not a focus of this guide.
