@@ -1,3 +1,7 @@
+# To Do
+- Clean up this repo. It's difficult to follow.
+- Add illustrations.
+
 # INTRODUCTION
 
 This repo is documentation on wireless access points. With the goal of clearly explaining them, this document will define them and demonstrate their different types. It will also show all steps necessary to turn a Debian-based Linux distribution into a simple wireless access point.
